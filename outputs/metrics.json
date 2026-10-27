@@ -1,0 +1,216 @@
+{
+    "dataset_summary": {
+        "total_records": 20640,
+        "train_records": 16512,
+        "test_records": 4128,
+        "missing_total_bedrooms": 207,
+        "duplicates": 0,
+        "target_capped_records": 992,
+        "target_capped_percent": 4.8062015503875966
+    },
+    "simple_linear_regression": {
+        "summary": {
+            "model_name": "Simple Linear Regression",
+            "predictor": "median_income",
+            "intercept": 44459.729169078666,
+            "coefficient": 41933.84939381274,
+            "formula": "median_house_value = 44,459.73 + 41,933.85 * median_income"
+        },
+        "train_metrics": {
+            "MAE": 62495.07655668728,
+            "MSE": 6991447170.182823,
+            "RMSE": 83614.87409655548,
+            "R2": 0.4769927345820525
+        },
+        "test_metrics": {
+            "MAE": 62990.86530093761,
+            "MSE": 7091157771.76555,
+            "RMSE": 84209.01241414454,
+            "R2": 0.45885918903846656
+        },
+        "cv_metrics": {
+            "CV_RMSE_mean": 83609.29324942289,
+            "CV_RMSE_std": 1338.9916528268795,
+            "CV_R2_mean": 0.4768767764035429,
+            "CV_R2_std": 0.011644169487620168
+        }
+    },
+    "multiple_linear_regression_baseline": {
+        "train_metrics": {
+            "MAE": 49594.842094724336,
+            "MSE": 4683203783.504252,
+            "RMSE": 68433.93736666226,
+            "R2": 0.6496648627123224
+        },
+        "test_metrics": {
+            "MAE": 50670.4892356536,
+            "MSE": 4908290571.346436,
+            "RMSE": 70059.19333925017,
+            "R2": 0.6254382675296264
+        },
+        "cv_metrics": {
+            "CV_RMSE_mean": 68604.16295529755,
+            "CV_RMSE_std": 1324.9472102500536,
+            "CV_R2_mean": 0.6476757451183028,
+            "CV_R2_std": 0.01320006478081749
+        }
+    },
+    "multiple_linear_regression_feature_engineered": {
+        "train_metrics": {
+            "MAE": 48785.15999761866,
+            "MSE": 4568841690.163609,
+            "RMSE": 67593.20742621708,
+            "R2": 0.6582199163728364
+        },
+        "test_metrics": {
+            "MAE": 49645.492430677135,
+            "MSE": 4778547420.215623,
+            "RMSE": 69127.03827168948,
+            "R2": 0.6353392338145935
+        },
+        "cv_metrics": {
+            "CV_RMSE_mean": 67858.77849135917,
+            "CV_RMSE_std": 1312.1722765604754,
+            "CV_R2_mean": 0.6552367821605849,
+            "CV_R2_std": 0.014270128170606532
+        }
+    },
+    "ridge_regression": {
+        "best_alpha": 0.8554672535565685,
+        "train_metrics": {
+            "MAE": 48786.57315947989,
+            "MSE": 4568970862.997152,
+            "RMSE": 67594.16293584197,
+            "R2": 0.6582102533762071
+        },
+        "test_metrics": {
+            "MAE": 49652.355445437766,
+            "MSE": 4779654065.30011,
+            "RMSE": 69135.04223836209,
+            "R2": 0.6352547834557465
+        },
+        "cv_metrics": {
+            "CV_RMSE_mean": 67884.26270286254,
+            "CV_RMSE_std": 1335.5653549698995,
+            "CV_R2_mean": 0.6549741119558734,
+            "CV_R2_std": 0.014473904029738839
+        }
+    },
+    "ceiling_effect_analysis": {
+        "total_test_samples": 4128,
+        "uncapped_samples": 3944,
+        "capped_samples": 184,
+        "overall_rmse": 69127.03827168948,
+        "uncapped_rmse": 60872.30644503542,
+        "capped_rmse": 166674.5966280299,
+        "uncapped_mae": 45405.83934361726,
+        "capped_mae": 140521.53468809082,
+        "uncapped_r2": 0.6091479114880607
+    },
+    "ceiling_effect_analysis_baseline": {
+        "total_test_samples": 4128,
+        "uncapped_samples": 3944,
+        "capped_samples": 184,
+        "overall_rmse": 70059.19333925017,
+        "uncapped_rmse": 61848.687548992624,
+        "capped_rmse": 167698.57536262381,
+        "uncapped_mae": 46428.90810007449,
+        "capped_mae": 141587.85879393615,
+        "uncapped_r2": 0.5965089569361912
+    },
+    "ceiling_effect_analysis_feature_engineered": {
+        "total_test_samples": 4128,
+        "uncapped_samples": 3944,
+        "capped_samples": 184,
+        "overall_rmse": 69127.03827168948,
+        "uncapped_rmse": 60872.30644503542,
+        "capped_rmse": 166674.5966280299,
+        "uncapped_mae": 45405.83934361726,
+        "capped_mae": 140521.53468809082,
+        "uncapped_r2": 0.6091479114880607
+    },
+    "vif_analysis": [
+        {
+            "Feature": "total_bedrooms",
+            "VIF": 36.30708680097
+        },
+        {
+            "Feature": "households",
+            "VIF": 35.82456399318629
+        },
+        {
+            "Feature": "total_rooms",
+            "VIF": 12.821806848964382
+        },
+        {
+            "Feature": "latitude",
+            "VIF": 8.798267056193287
+        },
+        {
+            "Feature": "longitude",
+            "VIF": 8.681823214711798
+        },
+        {
+            "Feature": "population",
+            "VIF": 6.345430763650748
+        },
+        {
+            "Feature": "median_income",
+            "VIF": 1.7409979730620164
+        },
+        {
+            "Feature": "housing_median_age",
+            "VIF": 1.2576287796182595
+        }
+    ],
+    "comparison_table": [
+        {
+            "Model": "Simple Linear Regression",
+            "Predictors": "median_income (1 feature)",
+            "Train RMSE": 83614.87409655548,
+            "Test RMSE": 84209.01241414454,
+            "Test MAE": 62990.86530093761,
+            "Test MSE": 7091157771.76555,
+            "Train R2": 0.4769927345820525,
+            "Test R2": 0.45885918903846656,
+            "CV RMSE Mean": 83609.29324942289,
+            "CV R2 Mean": 0.4768767764035429
+        },
+        {
+            "Model": "Multiple Linear Regression (Base)",
+            "Predictors": "All 9 features (numerical + one-hot)",
+            "Train RMSE": 68433.93736666226,
+            "Test RMSE": 70059.19333925017,
+            "Test MAE": 50670.4892356536,
+            "Test MSE": 4908290571.346436,
+            "Train R2": 0.6496648627123224,
+            "Test R2": 0.6254382675296264,
+            "CV RMSE Mean": 68604.16295529755,
+            "CV R2 Mean": 0.6476757451183028
+        },
+        {
+            "Model": "Multiple Linear Regression (FE)",
+            "Predictors": "All features + 3 engineered ratios",
+            "Train RMSE": 67593.20742621708,
+            "Test RMSE": 69127.03827168948,
+            "Test MAE": 49645.492430677135,
+            "Test MSE": 4778547420.215623,
+            "Train R2": 0.6582199163728364,
+            "Test R2": 0.6353392338145935,
+            "CV RMSE Mean": 67858.77849135917,
+            "CV R2 Mean": 0.6552367821605849
+        },
+        {
+            "Model": "Ridge Regression (FE + L2)",
+            "Predictors": "All features + ratios + L2 penalty",
+            "Train RMSE": 67594.16293584197,
+            "Test RMSE": 69135.04223836209,
+            "Test MAE": 49652.355445437766,
+            "Test MSE": 4779654065.30011,
+            "Train R2": 0.6582102533762071,
+            "Test R2": 0.6352547834557465,
+            "CV RMSE Mean": 67884.26270286254,
+            "CV R2 Mean": 0.6549741119558734
+        }
+    ]
+}
